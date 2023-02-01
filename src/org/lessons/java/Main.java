@@ -31,6 +31,39 @@ public class Main {
 		newDelfino.mangia();
 		newDelfino.nuota();
 		System.out.println("\n");
+		
+		
+		/*
+			Scrivere un programma che istanzi animali che volano o nuotano e richiamare i metodi faiVolare / faiNuotare 
+			passandoglieli come parametro.
+		 */
+		
+		Delfino delfino2 = new Delfino();
+		faiNuotare(delfino2);
+		
+		Passerotto passerotto2 = new Passerotto();
+		faiVolare(passerotto2);
+		
+		faiNuotare(newDelfino);
+		faiVolare(newPasserotto);
+		
+	}
+	
+	/*
+	 *  Scrivere un programma avente 2 metodi :
+			- void faiVolare(IVolante animale)
+			- void faiNuotare(INuotante animale)
+			
+		Questi metodi prendono come parametro un animale che può o volare / nuotare e 
+			richiamano il corrispondente metodo vola() / nuota().
+	 */
+	
+	public static void faiVolare(IVolante animale) {
+		animale.vola();
+	}
+	
+	public static void faiNuotare(INuotante animale) {
+		animale.nuota();
 	}
 
 }
